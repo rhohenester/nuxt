@@ -11,21 +11,22 @@
     </div>
   </nuxt-link>
 </template>
-    <script>
+<script>
 export default {
-  name: "EventCard",
+  name: 'EventCard',
   props: {
-    event: Object,
+    // eslint-disable-next-line vue/require-default-prop
+    event: Object
   },
   computed: {
     parsedDate() {
-      const eventDate = new Date(this.event.date);
-      return eventDate.toDateString();
-    },
-  },
-};
+      const eventDate = new Date(this.event.date)
+      return eventDate.toDateString()
+    }
+  }
+}
 </script>
-    <style scoped>
+<style scoped>
 div {
   padding: 20px;
   margin-bottom: 24px;
